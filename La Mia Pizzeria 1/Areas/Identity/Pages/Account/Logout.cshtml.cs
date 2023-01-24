@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace NetCore_01.Areas.Identity.Pages.Account
+namespace La_Mia_Pizzeria_1.Areas.Identity.Pages.Account
 {
     public class LogoutModel : PageModel
     {

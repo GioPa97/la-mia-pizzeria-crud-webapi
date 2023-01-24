@@ -1,13 +1,12 @@
-using La_Mia_Pizzeria_1.Database;
 using Microsoft.AspNetCore.Identity;
 
-
-
+using La_Mia_Pizzeria_1.Database;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<PizzeriaContext>();
 
-
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<PizzeriaContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

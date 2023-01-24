@@ -3,6 +3,8 @@ using La_Mia_Pizzeria_1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 
 
@@ -55,6 +57,7 @@ namespace La_Mia_Pizzeria_1.Controllers
         }
 
         [HttpGet]
+    
         public IActionResult Create()
         {
             using (PizzeriaContext db = new PizzeriaContext())
@@ -74,6 +77,7 @@ namespace La_Mia_Pizzeria_1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+    
         public IActionResult Create(PostCategoriesView formData)
         {
             if (!ModelState.IsValid)
@@ -100,6 +104,7 @@ namespace La_Mia_Pizzeria_1.Controllers
 
 
         [HttpGet]
+        
         public IActionResult Update(int id)
         {
             using (PizzeriaContext db = new PizzeriaContext())
@@ -124,6 +129,7 @@ namespace La_Mia_Pizzeria_1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public IActionResult Update(int id, PostCategoriesView formData)
         {
             if (!ModelState.IsValid)
@@ -166,6 +172,7 @@ namespace La_Mia_Pizzeria_1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+       
         public IActionResult Delete(int id)
         {
             using (PizzeriaContext db = new PizzeriaContext())
@@ -186,12 +193,7 @@ namespace La_Mia_Pizzeria_1.Controllers
             }
         }
 
-        [HttpDelete]
-        public IActionResult ProvaDelete()
-        {
-            return View("Create");
-        }
-
+      
     }
 
 }
