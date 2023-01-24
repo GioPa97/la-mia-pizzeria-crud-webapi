@@ -104,6 +104,7 @@ namespace La_Mia_Pizzeria_1.Controllers
 
 
         [HttpGet]
+        [Authorize]
         
         public IActionResult Update(int id)
         {
