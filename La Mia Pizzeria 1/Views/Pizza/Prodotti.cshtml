@@ -53,13 +53,13 @@ else
 /*@
 
 
-<div class="container">
-    <div class="row">
+<div class="flex-container">
+    <div class="row main-row mt-1 p-3">
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
-                <h1 class="mt-3 mb-3 text-center">Le nostre Pizze</h1>
+                <h1>Le nostre Pizze</h1>
                 <div>
-                    <input id="input_search" type="text" class="form-control" placeholder="Cerca per titolo..." />
+                    <input id="input_search" type="text" class="form-control" placeholder="Cerca la tua preferita..." />
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@ else
     </div>
     <div id="contenitore_no_articoli" class="row text-center d-none">
         <div class="col-12">
-            <h3>Non hai inserito alcun post</h3>
+            <h3>Non ci sono pizze disponibili al momento!</h3>
         </div>
     </div>
     <div id="contenitore_articoli" class="row d-none">
@@ -114,7 +114,7 @@ else
 
                     res.data.forEach(articolo => {
 
-                        console.log('articolo: ', articolo);
+                        console.log('articolo:', articolo);
 
                         document.getElementById('contenitore_articoli').innerHTML +=
                             `
@@ -125,6 +125,7 @@ else
                                             <div class="card-body">
                                                 <h5 class="card-title">${articolo.title}</h5>
                                                 <p class="card-text">${articolo.description}</p>
+                                                        
                                             </div>
                                         </a>
                                         </div>

@@ -13,7 +13,7 @@
 
         const id = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
         debugger;
-        axios.get(`http://localhost:5183/api/articoli/${id}`).then((res) =>
+        axios.get(`http://localhost:7211/api/Articoli ${id}`).then((res) =>
                 {
             let articolo = res.data;
             console.log('articolo ricevuto', articolo);
@@ -22,11 +22,13 @@
             document.getElementById('articolo_container').innerHTML +=
                 `
                     <div class="col-12 col-md-4 p-2">
-                          <div class="card post h-100">
+                          <div class="card  h-100">
                                 <img src="${articolo.image}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                 <h5 class="card-title">${articolo.title}</h5>
                                         <p class="card-text">${articolo.description}</p>
+                                                <p class="card-text">${articolo.prezzo}</p>
+                                         
                                 </div>
                         </div>
                     </div>
